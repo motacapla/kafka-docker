@@ -17,6 +17,9 @@ bash-4.4# $KAFKA_HOME/bin/kafka-topics.sh --list --bootstrap-server `broker-list
 bash-4.4# $KAFKA_HOME/bin/kafka-topics.sh --create --topic topic-from-cli --partitions 3 --replication-factor 2 --bootstrap-server `broker-list.sh` 
 
 ## Kafka from code
+### Increase the number of brokers
+$ docker-compose scale kafka=2
+
 ### Run consumer in container
 $ docker-compose exec consumer bash
 # python consumer.py
